@@ -1,5 +1,6 @@
 // npm install -g parcel-bundler
 // parcel index.html
+// needs type definition files
 import faker from "faker"; // weird underline meant I also had to import @types/faker
 
 // I guess TS community doesn't really do export default
