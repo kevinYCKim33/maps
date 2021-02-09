@@ -1,7 +1,8 @@
+// npm install -g parcel-bundler
 // parcel index.html
-import faker from "faker";
+import faker from "faker"; // weird underline meant I also had to import @types/faker
 
-// I guess TS doesn't really do export default
+// I guess TS community doesn't really do export default
 // generally a no no in TS community
 export class User {
   name: string;
