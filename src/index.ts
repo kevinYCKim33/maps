@@ -1,18 +1,16 @@
-// import { User } from "./User";
-// import { Company } from "./Company";
+// npm install -g parcel-bundler
+// parcel index.html
 
-// const user = new User();
-// console.log(user);
+import { User } from "./User";
+import { Company } from "./Company";
+import { CustomMap } from "./CustomMap";
 
-// const company = new Company();
-// console.log(company);
+const user = new User();
+const company = new Company();
+const customMap = new CustomMap("map");
+// customMap.googleMap // throws an error since googleMap is private
+// CustomMap intentionally limits the amount of options other engineers
+// have for google maps in index.ts
 
-// possible with npm install @types/googlemaps
-// hold command, click, click on Definitions
-new google.maps.Map(document.getElementById("map"), {
-  zoom: 1,
-  center: {
-    lat: 0,
-    lng: 0,
-  },
-});
+customMap.addMarker(user);
+customMap.addMarker(company);
